@@ -1,0 +1,34 @@
+.form-design input  
+{
+    border-radius: 0px;
+    box-shadow: none;
+    border: 1px solid #bcbcbc;
+    font-size: 14px;
+    height: 45px;
+}
+.form-design textarea  
+{
+    border-radius: 0px;
+    box-shadow: none;
+    border: 1px solid #bcbcbc;
+    font-size: 14px;
+    height: 100px;
+}
+.btn-1
+{
+    border-radius: 0px;
+    background-color: #002b99;
+    color: #fff;
+    box-shadow: none;
+    border:none;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+.title-heading
+{
+    background-color: #002b99;
+    color: #fff;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 400;
+}
