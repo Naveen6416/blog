@@ -10,8 +10,8 @@ function BlogList({ blogs, deleteBlog, selectBlogToEdit }) {
         <thead className="table">
           <tr>
             <th>S.No</th>
-            <th>Titles</th>
-            <th>Descriptions</th>
+            <th>Title</th>
+            <th>Description</th>
             <th>Action</th>
           </tr>
         </thead>
