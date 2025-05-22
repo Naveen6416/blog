@@ -7,8 +7,8 @@ function BlogList({ blogs }) {
         <thead className="table">
           <tr>
             <th>S.No</th>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Titles</th>
+            <th>Descriptions</th>
             <th>Action</th>
           </tr>
         </thead>
