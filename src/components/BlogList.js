@@ -1,6 +1,9 @@
 import React from 'react'
 
-function BlogList({ blogs }) {
+function BlogList({ blogs, deleteBlog, selectBlogToEdit }) {
+  
+  
+
   return (
     <div className='mt-4'>
       <table className="table table-striped table-bordered">
@@ -20,8 +23,8 @@ function BlogList({ blogs }) {
               <td>{blogs.title}</td>
               <td>{blogs.description}</td>
               <td>
-                <button className='btn btn-warning btn-sm'>Edit</button>
-                <button className='btn btn-danger btn-sm'>Delete</button>
+                <button onClick={() => selectBlogToEdit(index)} className='btn btn-warning btn-sm'>Edit</button>
+                <button onClick={()=>deleteBlog(index)} className='btn btn-danger btn-sm'>Delete</button>
               </td>
             </tr>
           ))}

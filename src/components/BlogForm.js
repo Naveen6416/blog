@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function BlogForm({addBlog}) {
+function BlogForm({addBlog, blogToEdit, editBlog}) {
+
+    
 
     const [title,setTitle] = useState('');
     const [description,setDescription] = useState('');
+
+    useEffect(() => {
+        if (blogToEdit) {
+        setTitle(blogToEdit.title);
+        setDescription(blogToEdit.description);
+        }
+    }, [blogToEdit]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (title && description) 
         {
-            addBlog({ title, description });
+            if (blogToEdit) {
+                editBlog({ ...blogToEdit, title, description });
+            }
+            else
+            {
+                addBlog({ title, description });
+            }
+            
             setTitle('');
             setDescription('');
         }
@@ -38,7 +54,9 @@ function BlogForm({addBlog}) {
                             onChange={(e) => setDescription(e.target.value)}
                         />
                     </div>
-                    <button className="btn-1">Submit</button>
+                    <button className="btn-1">
+                        {blogToEdit ? 'Update' : 'Submit'}
+                    </button>
                 </form>
             </div>
         </div>
